@@ -1,0 +1,23 @@
+
+$font-family: "Pretendard";
+
+@import url("../../../assets/woff/woff/Pretendard-Thin.woff");
+@font-face {
+    font-family: Pretendard;
+    src:url("../../../assets/woff/woff/Pretendard-Thin.woff") format('woff'),
+         url("../../../assets/woff/woff/Pretendard-SemiBold.woff") format('woff'), 
+         url("../../../assets/woff/woff/Pretendard-Regular.woff") format('woff'), 
+         url("../../../assets/woff/woff/Pretendard-Medium.woff") format('woff'), 
+         url("../../../assets/woff/woff/Pretendard-Light.woff") format('woff'), 
+         url("../../../assets/woff/woff/Pretendard-Extralight.woff") format('woff'), 
+         url("../../../assets/woff/woff/Pretendard-ExtraBold.woff") format('woff'), 
+         url("../../../assets/woff/woff/Pretendard-Bold.woff") format('woff'), 
+         url("../../../assets/woff/woff/Pretendard-Black.woff") format('woff');
+          }
+
+          @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }

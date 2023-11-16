@@ -1,0 +1,97 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 66px;
+    padding-right: var(--container-padding-x);
+    padding-left: var(--container-padding-x);
+    background-color: #1c1c1c;
+    transition: 0.5s;
+    z-index: 300;
+    font-size: .75rem;
+    .hidden &{
+        transform: translateY(-100%);
+    }
+    
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: currentColor;
+        opacity: .2;
+    }
+    .title{
+        font-weight: 500;
+    }
+
+    .top {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            font-weight: 600;
+        }
+
+        .btn {
+            margin-left: auto;
+            --background: #ff5f00;
+            --text: #fff;
+            --font-size: 16px;
+            --duration: .3s;
+            padding: 10px 1.25rem 5px;
+            transition: opacity .3s cubic-bezier(.215, .61, .355, 1);
+            letter-spacing: .5px;
+            font-weight: bold;
+            background: var(--background);
+            color: var(--text);
+            transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+            div.word{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                overflow: hidden;
+                text-shadow: 0 var(--font-shadow) 0 var(--text);
+                overflow: hidden;
+                span {
+                    display: block;
+                    backface-visibility: hidden;
+                    font-style: normal;
+                    transition: transform var(--duration) ease;
+                    transform: translateY(var(--m)) translateZ(0);
+                    $i: 1;
+
+                    @while $i < 12 {
+                        &:nth-child(#{$i}) {
+                            transition-delay: $i / 20 + s;
+                        }
+
+                        $i: $i + 1;
+                    }
+                }
+            }
+
+            &:hover {
+                --shadow: var(--shadow-hover);
+
+                span {
+                    --m: calc(var(--font-size) * -1);
+                }
+            }
+
+        }
+    }
+}
