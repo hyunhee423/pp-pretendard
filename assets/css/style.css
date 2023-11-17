@@ -1162,7 +1162,7 @@ small {
   min-width: none;
 }
 .sc-intro .cont .left .int-list {
-  margin-top: 0;
+  margin-top: 1.25rem;
   margin-bottom: 0;
 }
 .sc-intro .cont .left .int-list .row {
@@ -1172,22 +1172,17 @@ small {
   grid-column-gap: var(--grid-gutter);
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  --bar:0;
+  overflow: hidden;
 }
 .sc-intro .cont .left .int-list .row::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
-  width: 0;
+  width: var(--bar);
   height: 1px;
   background-color: #ff5f00;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
-  -webkit-transition: width 0.5;
-  transition: width 0.5;
 }
 .sc-intro .cont .left .int-list .row.animate::after {
   width: 100%;
@@ -1439,7 +1434,7 @@ small {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 50%;
+  width: 22%;
   margin: auto;
   text-align: center;
   padding: 12.75px 21.25px;
@@ -1454,8 +1449,9 @@ small {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 5rem;
-  margin-top: 4%;
+  font-size: 4rem;
+  margin-top: 2%;
+  line-height: 1.2;
 }
 .sc-white-box .cont-wrap .cont-area .content .cont-item {
   position: relative;
@@ -1463,7 +1459,6 @@ small {
   transition: font-variation-settings 0.45s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s, -webkit-transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: font-variation-settings 0.45s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s, transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: font-variation-settings 0.45s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s, transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  line-height: 1;
 }
 .sc-white-box .cont-wrap .cont-area .content .cont-item .number,
 .sc-white-box .cont-wrap .cont-area .content .cont-item .text {
@@ -2224,6 +2219,7 @@ small {
   grid-column: 1/4;
   position: relative;
   width: 100%;
+  --bar:0;
 }
 .sc-credits .credits-list h4::after {
   content: "";
@@ -2231,19 +2227,9 @@ small {
   bottom: 0;
   left: 0;
   display: block;
-  width: 100%;
+  width: var(--bar);
   height: 1px;
   background-color: #ff5f00;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  transition: -webkit-transform 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  transition: transform 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  transition: transform 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .sc-credits .credits-list .con1 {
   grid-column: 1/4;

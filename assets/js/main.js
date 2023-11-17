@@ -155,7 +155,7 @@ const infoText = gsap.to('.sc-info .parent .child', {
 
   text.to('.sc-white-box [data-number]',{
     x:()=>{
-      return $('.sc-white-box .cont-wrap .cont-area .content').innerWidth();
+      return $('.sc-white-box .cont-wrap .cont-area .content ').innerWidth();
     },
     xPercent:-100,
     fontWeight:900,
@@ -173,7 +173,7 @@ const infoText = gsap.to('.sc-info .parent .child', {
     x:()=>{
       return $('.sc-white-box .cont-wrap .cont-area .content').innerWidth()/2;
     },
-    xPercent:-100,
+    xPercent:-99,
     fontWeight:100,
     delay:3,
   })
@@ -241,6 +241,19 @@ const infoText = gsap.to('.sc-info .parent .child', {
 
   })
  
+  $('[data-line]').each(function(){
+    gsap.to($(this),{
+      scrollTrigger: {
+        trigger: $(this),
+        start: "0% 50%",
+        end: "100% 100%",
+        // markers:true,
+      },
+      '--bar':'100%'
+    })
+  
+  })
+  
 
   // Swiper 슬라이더 설정
   var swiper2 = new Swiper(".mySwiper2", {
