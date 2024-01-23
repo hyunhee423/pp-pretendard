@@ -1,3 +1,12 @@
+// 스크롤 이동
+$('.scroll').click(function(event){
+  console.log(".scroll");
+  event.preventDefault();
+  $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+});
+
+
+
 
 // 커서 포인트 
 window.addEventListener("mousemove", function (e) {
